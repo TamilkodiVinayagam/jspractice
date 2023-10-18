@@ -6,6 +6,24 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+<script>
+class Person{
+   constructor(name,age,country){
+this.name=name;
+this.age=age;
+this.country=country;
+} 
+details(){
+    return "My name is "+this.name+". I am " + this.age+ " years old. My country is "+this.country
+}
+}
+const myper=new Person("Tamilkodi",38,"India");
+const myperson=new Person("Tamilselvi",35,"India");
+document.getElementById("demo").innerHTML=myper.details();
+document.getElementById("demo1").innerHTML=myperson.details();
+    </script>
 </body>
 </html>

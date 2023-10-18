@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo">This is the paragraph</p>
+    <p id="demo1">This is second paragraph</p>
+    <input type="button" value="click to change p backgroundcolor" onclick="changecolor()">
+    <script>
+        function changecolor(){
+        const element=document.getElementsByTagName("p");
+        
+element[0].style.backgroundColor="red";
+element[1].style.backgroundColor="green";
+        }
+        </script>
+</body>
+</html>

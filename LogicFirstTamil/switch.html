@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="text" id="invalue">
+    </div>
+    <div>
+        <button onclick="cal()">Calculate</button>
+    </div>
+    <div id="result">
+
+    </div>
+    <script>
+function cal(){
+let exp=document.getElementById("invalue").value
+
+let pattern = /(\d+)([+\-*/])(\d+)/;
+let match = exp.match(pattern);
+let result
+if (match) {
+    let operand1 = parseInt(match[1]);
+    let operator = match[2];
+    let operand2 = parseInt(match[3]);
+
+    switch(operator){
+        case "+":
+            result=operand1 + operand2
+            break
+            case "-":
+            result=operand1 - operand2
+            break
+            case "*":
+            result=operand1 * operand2
+            break
+            case "/":
+            result= operand1 / operand2
+            break
+    }
+}
+       document.getElementById("result").innerHTML=result
+}
+    </script>
+</body>
+</html>

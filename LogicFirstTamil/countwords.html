@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h2>Type a sentence</h2>
+        <div>
+ <textarea id="sentence" rows="5" cols="20"></textarea>
+        </div>
+        <div>
+        <button id="buttonid" onclick="calWords()">Calculate Words</button>
+    </div><br>
+    <div id="result">
+
+    </div>
+         </div>
+        
+        <script>
+            function calWords(){
+                let sentence=document.getElementById("sentence").value
+                let words=sentence.trim().split(" ")
+               let numberOfWords= words.length
+               document.getElementById("result").innerHTML="Words count: "+numberOfWords
+            }
+</script>
+</body>
+</html>
